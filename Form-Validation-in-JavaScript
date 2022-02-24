@@ -43,12 +43,19 @@
            alert("Please enter the correct phone number");
            return false;
        }
-   
+        let w = document.getElementById("email").value
+       {
+        if(y == ""){
+           alert("Please enter email");
+           return false;
+       } 
        let z1 = document.getElementById('password1').value;
 
        let z2 = document.getElementById('password2').value;
        if(z1 != z2){
            alert('password does not match');
        }
-   
    }
+   </script>
+   </body>
+   </html>
