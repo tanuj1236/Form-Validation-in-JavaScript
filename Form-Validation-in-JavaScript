@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+  
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .form1{
+               border-radius: 10px;
+               padding: 100px;
+               text-align: center;
+               }
+        
+    </style>
+</head>
+<body>
+    <div class="form1">
+     <form onsubmit="return validate()">
+         <input type="text" id="name" placeholder="Enter Your Name"><br>
+         <input type="number"id="php" placeholder="Enter Your Number"><br>
+        <input type="email" id="email" placeholder="Enter Your Email"><br>
+          <input type="password"id="password1" placeholder="Enter Your Password"><br>
+      <input type="password"id="password2">    <br>
+         <button onclick="add()">Submit</button>
+     </form>
+    </div>
+
+    <script>
+   function validate(){
+       let x =  document.getElementById("name").value;
+       if(x == "" || !isNaN(x) || x.length < 3 || x.length > 10){
+           alert("Please enter the correct name");
+           return false;
+       }
+   
+       let y = document.getElementById("php").value;
+       if(y == "" || y.length != 12){
+           alert("Please enter the correct phone number");
+           return false;
+       }
+   
+       let z1 = document.getElementById('password1').value;
+
+       let z2 = document.getElementById('password2').value;
+       if(z1 != z2){
+           alert('password does not match');
+       }
+   
+   }
